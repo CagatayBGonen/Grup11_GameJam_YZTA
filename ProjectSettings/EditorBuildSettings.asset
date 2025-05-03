@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMenu.unity
     guid: 5130747cc0dfa6448899fbaaf90ab3c6
   - enabled: 1
+    path: Assets/Scenes/ExampleLevel1.unity
+    guid: ffc72762dfc50c543a63d8fddf787e6f
+  - enabled: 1
     path: Assets/Scenes/EnergyCollect.unity
     guid: 69eab7c87fb8dcc45900970656b6c487
   - enabled: 1
