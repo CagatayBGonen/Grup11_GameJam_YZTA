@@ -26,6 +26,7 @@ public class GameMenu : MonoBehaviour
         quitButton.SetActive(false);
         settingsButton.SetActive(false);
         gameNameText.SetActive(false);
+        
     }
 
     public void BackToMainMenu()
