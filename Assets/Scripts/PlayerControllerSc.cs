@@ -16,7 +16,11 @@ public class PlayerControllerSc : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(moveForwardSpedd, rb.linearVelocity.y);
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(moveForwardSpedd, rb.linearVelocity.y);
+        }
+        
     }
     void Update()
     {

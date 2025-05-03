@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private float offsetX = 1f;
 
-    private void Update()
+    private void LateUpdate()
     {
         Vector3 cameraPosition = new Vector3(targetObj.position.x+offsetX, targetObj.position.y + offsetY, -10f);
         transform.position = Vector3.Slerp(transform.position, cameraPosition, followSpeed * Time.deltaTime);
