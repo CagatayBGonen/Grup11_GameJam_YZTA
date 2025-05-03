@@ -29,6 +29,11 @@ public class GameManager : MonoBehaviour
             LevelCompleted(); // level tamamlandýgýnda calýstýrýlan method
         } 
     }
+    public void LooseEnergy()
+    {
+        energyCount--;
+        Debug.Log("Enerji kaybedildi: " + energyCount);
+    }
     
     private void LevelCompleted() // level tamamlandýgýnda calýstýrýlan metho
     {
