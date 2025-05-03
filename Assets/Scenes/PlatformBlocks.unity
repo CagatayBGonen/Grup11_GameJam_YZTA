@@ -493,10 +493,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrounTile05
       objectReference: {fileID: 0}
-    - target: {fileID: 3868207166545597572, guid: 603f690b75a864a45ac7e067bc7eb272, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -554,10 +550,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrounTile04
       objectReference: {fileID: 0}
-    - target: {fileID: 6891868340374328250, guid: a3e96435e15616a41916052a8352be1c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -574,10 +566,6 @@ PrefabInstance:
     - target: {fileID: 3401171224152669964, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
       propertyPath: m_Name
       value: GrounTile02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3401171224152669964, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8047090748251684876, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -635,10 +623,6 @@ PrefabInstance:
     - target: {fileID: 1244332761215920215, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
       propertyPath: m_Name
       value: GrounTile01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1244332761215920215, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7873607032696510557, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -736,10 +720,6 @@ PrefabInstance:
     - target: {fileID: 3276238894517757074, guid: aebad52fbd637df4a8852270d2bd03b9, type: 3}
       propertyPath: m_Name
       value: GrounTile03
-      objectReference: {fileID: 0}
-    - target: {fileID: 3276238894517757074, guid: aebad52fbd637df4a8852270d2bd03b9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
