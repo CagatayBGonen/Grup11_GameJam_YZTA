@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
 
     private void LateUpdate()
     {
-        Vector3 cameraPosition = new Vector3(targetObj.position.x+offsetX, targetObj.position.y + offsetY, -10f);
+        Vector3 cameraPosition = new Vector3(targetObj.position.x+offsetX, transform.position.y, -10f);
         transform.position = Vector3.Slerp(transform.position, cameraPosition, followSpeed * Time.deltaTime);
     }
 }
