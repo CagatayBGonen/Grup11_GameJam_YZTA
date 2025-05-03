@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - EnergyBall
   - Barrier
+  - GroundTrigger
   layers:
   - Default
   - TransparentFX
@@ -14,10 +15,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Midground
+  - Foreground
+  - Collectable
   - 
   - 
   - 
@@ -43,6 +44,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3769021133
+    locked: 0
+  - name: Midground
+    uniqueID: 1412085813
+    locked: 0
+  - name: Foreground
+    uniqueID: 690521193
     locked: 0
   m_RenderingLayers:
   - Default

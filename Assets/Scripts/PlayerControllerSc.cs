@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerControllerSc : MonoBehaviour
 {
     public float jumpForce = 7f; // Karakter zıplama gücü
+    [SerializeField]
+    private float moveForwardSpedd = 5f;
     private Rigidbody2D rb;
     private Animator animator; // Animator bileşeni
     private bool isGrounded = true;  // Karakterin zeminle temas edip etmediğini kontrol etmek için
@@ -12,7 +14,10 @@ public class PlayerControllerSc : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // Rigidbody2D bileşenini al
         animator = GetComponent<Animator>(); // Animator bileşenini al
     }
-
+    private void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(moveForwardSpedd, rb.linearVelocity.y);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
@@ -25,6 +30,7 @@ public class PlayerControllerSc : MonoBehaviour
         }
 
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
