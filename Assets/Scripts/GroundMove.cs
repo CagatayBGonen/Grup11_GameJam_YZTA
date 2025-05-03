@@ -8,10 +8,12 @@ public class GroundMove : MonoBehaviour
     private void Update()
     {
         transform.Translate(Vector2.left * moveSpeed * Time.deltaTime); // platform hareket ettirme
+        //float deleteX = Camera.main.transform.position.x - 25f; // dinamik sinir.
 
-        if(transform.position.x < -20) // ekran disine ciktiginde sil
-        {
-            Destroy(gameObject);
-        }
+        //if(transform.position.x < deleteX) // ekran disine ciktiginde sil
+        //{
+        //    Destroy(gameObject);
+        //}
     }
+
 }
