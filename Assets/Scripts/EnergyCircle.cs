@@ -4,7 +4,7 @@ public class EnergyCircle : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("bir sey ile carpisti");
+        
         if (other.CompareTag("Player"))
         {
             Debug.Log("player ile carpisti");
