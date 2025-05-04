@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4160746309168789138
+--- !u!1 &4828320797812510516
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6235401149036512871}
-  - component: {fileID: 3354154685109636047}
-  - component: {fileID: 3311463614406165563}
-  - component: {fileID: 810883442440750821}
+  - component: {fileID: 3994481857611108184}
+  - component: {fileID: 3911918060187402797}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -19,57 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6235401149036512871
+--- !u!4 &3994481857611108184
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160746309168789138}
+  m_GameObject: {fileID: 4828320797812510516}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7713785, y: 2.541438, z: 0.047444977}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3354154685109636047
+--- !u!114 &3911918060187402797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160746309168789138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d759b5517a41942860575aaea9a4b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  groundPrefabs:
-  - {fileID: 1244332761215920215, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
-  - {fileID: 6686666926348302876, guid: 757987fe73d09a342b0d1dcdcf353ac0, type: 3}
-  - {fileID: 6270349219249957832, guid: 867ba600864b8d741a60616c1381ccb2, type: 3}
-  - {fileID: 3401171224152669964, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
-  - {fileID: 274027783497520850, guid: d8e14e35beb8f7f41a6737310901b086, type: 3}
-  - {fileID: 7460419807173540897, guid: 34013938a6fb6854e8be82e6a224b471, type: 3}
-  - {fileID: 3276238894517757074, guid: aebad52fbd637df4a8852270d2bd03b9, type: 3}
-  - {fileID: 8720896838650536957, guid: b9caf711d5c25434fb472c8c75aae0ca, type: 3}
-  - {fileID: 6074065781542188591, guid: 1be1f60dc64fe4348918c1e15989885d, type: 3}
-  - {fileID: 6891868340374328250, guid: a3e96435e15616a41916052a8352be1c, type: 3}
-  - {fileID: 4269468515720098500, guid: 22ae936bb4d77834ebb48667e2fc11a8, type: 3}
-  - {fileID: 1073522942436372910, guid: 9b7cb995203f5ff45b13fc35a3e4e564, type: 3}
-  - {fileID: 3868207166545597572, guid: 603f690b75a864a45ac7e067bc7eb272, type: 3}
-  - {fileID: 219212159878938235, guid: 085c667d815534346a38895208297c13, type: 3}
-  - {fileID: 2573489143076081788, guid: 6d9ec6288b1bc6245b39a5fe49eed72a, type: 3}
-  initialTiles: 3
---- !u!114 &3311463614406165563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160746309168789138}
+  m_GameObject: {fileID: 4828320797812510516}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e4fc8d55a2e747488fa27a8791f5db8, type: 3}
@@ -79,17 +48,5 @@ MonoBehaviour:
   player: {fileID: 0}
   energyCount: 0
   energyGoal: 10
---- !u!114 &810883442440750821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160746309168789138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 762a3b3a4598c58419afe13340d305a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energyCountText: {fileID: 0}
-  gameManager: {fileID: 3311463614406165563}
+  deadSound: {fileID: 8300000, guid: d130330b9216ec9429377bebb947f4e0, type: 3}
+  GameMusic: {fileID: 0}
