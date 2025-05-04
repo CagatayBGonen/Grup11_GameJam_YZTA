@@ -41,18 +41,36 @@ public class PlayerControllerSc : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        if (!isDashing)
-        {
-            rb.linearVelocity = new Vector2(moveForwardSpeed, rb.linearVelocity.y);
-        }
+{
+    Vector3 min = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0));
+    Vector3 max = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, 0));
 
-        // DashBar karakteri takip etsin
-        if (dashBarInstance != null)
+    float clampedX = Mathf.Clamp(rb.position.x, min.x, max.x);
+    float clampedY = Mathf.Clamp(rb.position.y, min.y, max.y);
+
+    // Kameranın dışına çıkmasın
+    rb.position = new Vector2(clampedX, rb.position.y);
+
+    // Eğer dash yaparken sınırı aştıysa, hızı sıfırla
+    if (isDashing)
+    {
+        if (rb.position.x <= min.x || rb.position.x >= max.x)
         {
-            dashBarInstance.transform.position = transform.position + new Vector3(0, 1.5f, 0);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y); // X hızını durdur
+            EndDash(); // Dash'i erken bitir
         }
     }
+    else
+    {
+        rb.linearVelocity = new Vector2(moveForwardSpeed, rb.linearVelocity.y);
+    }
+
+    // DashBar pozisyonu güncelle
+    if (dashBarInstance != null)
+    {
+        dashBarInstance.transform.position = transform.position + new Vector3(0, 1.5f, 0);
+    }
+}
 
     void Update()
     {
@@ -157,7 +175,7 @@ public class PlayerControllerSc : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground")&&collision.gameObject.CompareTag("AirGround"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("AirGround"))
         {
             isGrounded = true;
             canDoubleJump = false;
