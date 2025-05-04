@@ -8,9 +8,14 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private float offsetX = 1f;
 
-    private void LateUpdate()
+    private void Update()
     {
-        Vector3 cameraPosition = new Vector3(targetObj.position.x+offsetX, transform.position.y, -10f);
-        transform.position = Vector3.Slerp(transform.position, cameraPosition, followSpeed * Time.deltaTime);
+        gameObject.transform.Translate(Vector3.right * followSpeed * Time.deltaTime);
     }
+    //private void LateUpdate()
+    //{
+    //    //Vector3 cameraPosition = new Vector3(targetObj.position.x+offsetX, transform.position.y, -10f);
+    //    //transform.position = Vector3.Slerp(transform.position, cameraPosition, followSpeed * Time.deltaTime);
+        
+    //}
 }
