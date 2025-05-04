@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7873607032696510557}
   m_Layer: 0
   m_Name: GroundTile01
-  m_TagString: Untagged
+  m_TagString: SpawnMapTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1515,11 +1515,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2497025632365877733, guid: 13a1a0725969ed44c90f82b6a299cf9d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.17
+      value: 3.703
       objectReference: {fileID: 0}
     - target: {fileID: 2497025632365877733, guid: 13a1a0725969ed44c90f82b6a299cf9d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.8
+      value: -2.964
       objectReference: {fileID: 0}
     - target: {fileID: 2497025632365877733, guid: 13a1a0725969ed44c90f82b6a299cf9d, type: 3}
       propertyPath: m_LocalPosition.z

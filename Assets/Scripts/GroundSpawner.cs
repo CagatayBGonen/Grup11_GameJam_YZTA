@@ -3,17 +3,23 @@ using UnityEngine;
 
 public class GroundSpawner : MonoBehaviour
 {
- public List<GameObject> groundPrefabs; // 5 farklı platform prefabı
+public List<GameObject> groundPrefabs; // Platform prefabları (0: sabit başlangıç)
     public int initialTiles = 3; // Oyunun başında kaç tane tile spawn edilecek
     private Transform lastSpawnPoint;
 
     void Start()
     {
-        // İlk prefabı sahneye koy, bu önemli çünkü ilk pozisyonu referans alacağız
-        GameObject firstTile = Instantiate(GetRandomPrefab(), Vector3.zero, Quaternion.identity);
+        // İlk sabit platformu yerleştir
+        GameObject firstTile = Instantiate(groundPrefabs[0], Vector3.zero, Quaternion.identity);
         lastSpawnPoint = firstTile.transform.Find("NextSpawnPoint");
 
-        // Diğer başlangıç tile'larını spawnla
+        if (lastSpawnPoint == null)
+        {
+            Debug.LogError("İlk prefab içinde 'NextSpawnPoint' yok!");
+            return;
+        }
+
+        // Geri kalan başlangıç platformlarını rastgele yerleştir
         for (int i = 0; i < initialTiles - 1; i++)
         {
             SpawnTile();
@@ -24,17 +30,19 @@ public class GroundSpawner : MonoBehaviour
     {
         GameObject prefabToSpawn = GetRandomPrefab();
         GameObject newTile = Instantiate(prefabToSpawn, lastSpawnPoint.position, Quaternion.identity);
+
         lastSpawnPoint = newTile.transform.Find("NextSpawnPoint");
 
         if (lastSpawnPoint == null)
         {
-            Debug.LogError("NextSpawnPoint bulunamadı! Prefab içindeki 'NextSpawnPoint' boşluğu eksik olabilir.");
+            Debug.LogError("Yeni prefab içinde 'NextSpawnPoint' eksik!");
         }
     }
 
     GameObject GetRandomPrefab()
     {
-        int index = Random.Range(0, groundPrefabs.Count);
+        // İlk prefab (index 0) sabit başlangıç olduğu için 1'den başlıyoruz
+        int index = Random.Range(1, groundPrefabs.Count);
         return groundPrefabs[index];
     }
 
