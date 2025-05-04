@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
-    private int energyCount = 0; // enerji sayýsýný tutacak
+    public int energyCount = 0; // enerji sayýsýný tutacak
     public int energyGoal = 10; // toplam enerji limiti
 
     private void Awake()
