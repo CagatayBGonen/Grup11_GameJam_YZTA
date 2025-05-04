@@ -9,17 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/GameMenu.unity
     guid: 5130747cc0dfa6448899fbaaf90ab3c6
   - enabled: 1
-    path: Assets/Scenes/ExampleLevel1.unity
-    guid: ffc72762dfc50c543a63d8fddf787e6f
-  - enabled: 1
-    path: Assets/Scenes/EnergyCollect.unity
-    guid: 69eab7c87fb8dcc45900970656b6c487
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 2c9e3b35609958a43a6cf1139fb2cc62
+  - enabled: 1
+    path: Assets/Scenes/ExampleLevel1.unity
+    guid: ffc72762dfc50c543a63d8fddf787e6f
+  - enabled: 0
+    path: Assets/Scenes/EnergyCollect.unity
+    guid: 69eab7c87fb8dcc45900970656b6c487
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
