@@ -157,7 +157,7 @@ public class PlayerControllerSc : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground")&&collision.gameObject.CompareTag("AirGround"))
         {
             isGrounded = true;
             canDoubleJump = false;
@@ -168,4 +168,25 @@ public class PlayerControllerSc : MonoBehaviour
                 animator.SetBool("isJumping", false);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            GameManager.Instance.GameOver();
+            Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("Barrier"))
+        {
+            GameManager.Instance.LooseEnergy();
+            
+        }
+        else if (collision.CompareTag("EnergyBall"))
+        {
+            Debug.Log("player ile carpisti");
+            GameManager.Instance.CollectEnergy(); // GameManager scriptindeki CollectEnergy methodunu calistiriyoruz.
+            Destroy(collision.gameObject);
+        }
+
+    }
+    
 }
