@@ -686,7 +686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20d759b5517a41942860575aaea9a4b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 472689865}
+  groundPrefabs:
+  - {fileID: 1244332761215920215, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
+  - {fileID: 3401171224152669964, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
+  - {fileID: 3276238894517757074, guid: aebad52fbd637df4a8852270d2bd03b9, type: 3}
+  - {fileID: 6891868340374328250, guid: a3e96435e15616a41916052a8352be1c, type: 3}
+  - {fileID: 3868207166545597572, guid: 603f690b75a864a45ac7e067bc7eb272, type: 3}
   initialTiles: 2
 --- !u!4 &403945704
 Transform:
@@ -703,11 +708,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &472689865 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 772662198302580989, guid: 9a96c3f0969772340891ddee47e79fe4, type: 3}
-  m_PrefabInstance: {fileID: 919330205613998851}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &472689866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7566916182233915605, guid: 9a96c3f0969772340891ddee47e79fe4, type: 3}
@@ -1036,7 +1036,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdbd9614cfcc10b47b06c6b6f1c6a9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundSpawner: {fileID: 403945703}
 --- !u!61 &1110074564
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1651,7 +1650,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObj: {fileID: 1581429245}
   followSpeed: 3
-  offsetY: 3
   offsetX: 5
 --- !u!1 &1935940159
 GameObject:
@@ -1791,6 +1789,22 @@ PrefabInstance:
     - target: {fileID: 3183465125746406394, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
       propertyPath: m_Constraints
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091745366607519273, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
+      propertyPath: jumpForce
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091745366607519273, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
+      propertyPath: fastFallForce
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091745366607519273, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
+      propertyPath: doubleJumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091745366607519273, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
+      propertyPath: explosionEffect
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6823396470660693055, guid: 7b578c3b814bcc44aa8a48b9116e9c2d, type: 3}
       propertyPath: m_Name
