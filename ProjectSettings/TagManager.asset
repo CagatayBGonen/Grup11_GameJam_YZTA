@@ -10,6 +10,7 @@ TagManager:
   - GroundTrigger
   - Enemy
   - AirGround
+  - SpawnMapTile
   layers:
   - Default
   - TransparentFX
