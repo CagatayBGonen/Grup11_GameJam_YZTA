@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControllerSc : MonoBehaviour
 {
-    public float jumpForce = 6f;
+  public float jumpForce = 6f;
     public float doubleJumpForce = 7f;
-    public float fastFallForce = -10f;
+    public float fastFallForce = -6f; // Normal zıplamada S'ye basılırsa
+    public float superFastFallForce = -10f; // Double jump sonrası S'ye basılırsa
     public float dashForce = 15f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 5f;
@@ -21,10 +23,21 @@ public class PlayerControllerSc : MonoBehaviour
     private float dashTimer;
     private float dashCooldownTimer;
 
+    public GameObject dashBarPrefab;
+    private GameObject dashBarInstance;
+    private Image dashBarFill;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        if (dashBarPrefab != null)
+        {
+            dashBarInstance = Instantiate(dashBarPrefab);
+            dashBarFill = dashBarInstance.transform.Find("Background/Fill").GetComponent<Image>();
+            dashBarInstance.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
@@ -32,6 +45,12 @@ public class PlayerControllerSc : MonoBehaviour
         if (!isDashing)
         {
             rb.linearVelocity = new Vector2(moveForwardSpeed, rb.linearVelocity.y);
+        }
+
+        // DashBar karakteri takip etsin
+        if (dashBarInstance != null)
+        {
+            dashBarInstance.transform.position = transform.position + new Vector3(0, 1.5f, 0);
         }
     }
 
@@ -57,16 +76,17 @@ public class PlayerControllerSc : MonoBehaviour
         // Hızlı düşme
         if (!isGrounded && Input.GetKeyDown(KeyCode.S))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fastFallForce);
+            float fallForce = hasDoubleJumped ? superFastFallForce : fastFallForce;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, fallForce);
         }
 
-        // Dash sadece havadayken ve cooldown süresi dolmuşsa
+        // Dash
         if (!isGrounded && Input.GetKeyDown(KeyCode.D) && canDash && !isDashing)
         {
             StartDash();
         }
 
-        // Dash süresi
+        // Dash süresi kontrolü
         if (isDashing)
         {
             dashTimer -= Time.deltaTime;
@@ -80,12 +100,23 @@ public class PlayerControllerSc : MonoBehaviour
         if (!canDash)
         {
             dashCooldownTimer -= Time.deltaTime;
+
+            if (dashBarInstance != null && dashBarFill != null)
+            {
+                float fill = Mathf.Clamp01(1f - (dashCooldownTimer / dashCooldown));
+                dashBarFill.fillAmount = fill;
+
+                if (fill >= 1f)
+                {
+                    dashBarInstance.SetActive(false);
+                }
+            }
+
             if (dashCooldownTimer <= 0f)
             {
                 canDash = true;
             }
         }
-
     }
 
     void Jump(float force)
@@ -98,29 +129,31 @@ public class PlayerControllerSc : MonoBehaviour
     }
 
     void StartDash()
-{
-    isDashing = true;
-    canDash = false;
-    dashTimer = dashDuration;
-    dashCooldownTimer = dashCooldown;
+    {
+        isDashing = true;
+        canDash = false;
+        dashTimer = dashDuration;
+        dashCooldownTimer = dashCooldown;
 
-    // Dash hareketi
-    rb.linearVelocity = new Vector2(dashForce, 0f);
+        rb.linearVelocity = new Vector2(dashForce, 0f);
 
-    // Dash animasyonu için bool parametreyi true yapıyoruz
-    if (animator != null)
-        animator.SetBool("isDashing", true); // Bool parametre kullanıyoruz
-}
-    
+        if (animator != null)
+            animator.SetBool("isDashing", true);
 
-void EndDash()
-{
-    isDashing = false;
+        if (dashBarInstance != null && dashBarFill != null)
+        {
+            dashBarInstance.SetActive(true);
+            dashBarFill.fillAmount = 0f;
+        }
+    }
 
-    // Dash bittiğinde bool parametreyi false yapıyoruz
-    if (animator != null)
-        animator.SetBool("isDashing", false); // Dash tamamlandığında false yapıyoruz
-}
+    void EndDash()
+    {
+        isDashing = false;
+
+        if (animator != null)
+            animator.SetBool("isDashing", false);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
