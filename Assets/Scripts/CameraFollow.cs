@@ -6,7 +6,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private float followSpeed = 1f;
     [SerializeField]
-    private float offsetX = 1f;
+    //private float offsetX = 1f;
 
     private void Update()
     {

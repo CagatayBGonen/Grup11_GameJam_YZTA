@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
-    public int energyCount = 0; // enerji sayýsýný tutacak
+    public int energyCount = 0; // enerji sayï¿½sï¿½nï¿½ tutacak
     public int energyGoal = 10; // toplam enerji limiti
+    public AudioClip deadSound;
+    public AudioSource GameMusic;
 
     private void Awake()
     {
@@ -23,14 +25,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CollectEnergy() // enerji sayýsýný artýrýr
+    public void CollectEnergy() // enerji sayï¿½sï¿½nï¿½ artï¿½rï¿½r
     {
         energyCount++;
-        Debug.Log("Enerji Toplandý: " + energyCount);
+        Debug.Log("Enerji Toplandï¿½: " + energyCount);
 
-        if(energyCount >= energyGoal) // amaçlanan enerji seviyesine gelinip gelinmedigi kontrol ediliyior.
+        if(energyCount >= energyGoal) // amaï¿½lanan enerji seviyesine gelinip gelinmedigi kontrol ediliyior.
         {
-            LevelCompleted(); // level tamamlandýgýnda calýstýrýlan method
+            LevelCompleted(); // level tamamlandï¿½gï¿½nda calï¿½stï¿½rï¿½lan method
         } 
     }
     public void LooseEnergy()
@@ -43,14 +45,20 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    private void LevelCompleted() // level tamamlandýgýnda calýstýrýlan metho
+    private void LevelCompleted() // level tamamlandï¿½gï¿½nda calï¿½stï¿½rï¿½lan metho
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // bir sonraki index sýrasýndaki scene acýlýr.
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // bir sonraki index sï¿½rasï¿½ndaki scene acï¿½lï¿½r.
     }
 
     public void GameOver()
     {
+        if (GameMusic != null && GameMusic.isPlaying)
+    {
+        GameMusic.Stop();
+    }
         gameOver.Setup(energyCount);
         player.SetActive(false);
+        AudioSource.PlayClipAtPoint(deadSound, transform.position);
+
     }
 }
