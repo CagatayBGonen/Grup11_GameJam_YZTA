@@ -25,6 +25,8 @@ public class PlayerControllerSc : MonoBehaviour
 
     public GameObject dashBarPrefab;
     private GameObject dashBarInstance;
+
+     public AudioClip collectSound;
     private Image dashBarFill;
 
     void Start()
@@ -203,6 +205,7 @@ public class PlayerControllerSc : MonoBehaviour
             Debug.Log("player ile carpisti");
             GameManager.Instance.CollectEnergy(); // GameManager scriptindeki CollectEnergy methodunu calistiriyoruz.
             Destroy(collision.gameObject);
+            AudioSource.PlayClipAtPoint(collectSound, transform.position);
         }
 
     }
