@@ -11,7 +11,7 @@ public class GameMenu : MonoBehaviour
     public GameObject gameNameText;
      public void PlayGame()
     {
-        SceneManager.LoadScene("Level1"); // Oyun sahnesinin adını buraya yaz
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // bir sonraki index'li sahne devreye girer.
     }
 
     public void QuitGame()

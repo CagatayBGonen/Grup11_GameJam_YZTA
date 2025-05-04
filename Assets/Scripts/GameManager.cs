@@ -5,6 +5,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameOver gameOver;
+
+    public GameObject player;
+
     private int energyCount = 0; // enerji sayýsýný tutacak
     public int energyGoal = 10; // toplam enerji limiti
 
@@ -38,5 +42,11 @@ public class GameManager : MonoBehaviour
     private void LevelCompleted() // level tamamlandýgýnda calýstýrýlan metho
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // bir sonraki index sýrasýndaki scene acýlýr.
+    }
+
+    public void GameOver()
+    {
+        gameOver.Setup(energyCount);
+        player.SetActive(false);
     }
 }
