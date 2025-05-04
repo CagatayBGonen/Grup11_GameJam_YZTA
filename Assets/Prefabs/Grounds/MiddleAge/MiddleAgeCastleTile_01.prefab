@@ -1132,7 +1132,7 @@ GameObject:
   - component: {fileID: 5762575728152327662}
   m_Layer: 0
   m_Name: MiddleAgeCastleTile_01
-  m_TagString: Untagged
+  m_TagString: SpawnMapTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
