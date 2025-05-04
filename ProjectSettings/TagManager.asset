@@ -8,6 +8,8 @@ TagManager:
   - EnergyBall
   - Barrier
   - GroundTrigger
+  - Enemy
+  - AirGround
   layers:
   - Default
   - TransparentFX

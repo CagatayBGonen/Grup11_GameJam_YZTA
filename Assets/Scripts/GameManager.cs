@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     {
         energyCount--;
         Debug.Log("Enerji kaybedildi: " + energyCount);
+        if(energyCount <= -1)
+        {
+            GameOver();
+        }
     }
     
     private void LevelCompleted() // level tamamlandýgýnda calýstýrýlan metho
