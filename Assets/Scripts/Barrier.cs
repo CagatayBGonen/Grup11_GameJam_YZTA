@@ -16,7 +16,7 @@ public class Barrier : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GameManager.Instance.GameOver();
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

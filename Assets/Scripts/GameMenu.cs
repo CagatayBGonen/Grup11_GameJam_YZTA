@@ -1,18 +1,41 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameMenu : MonoBehaviour
 {
-    public GameObject settingsPanel;
+    public GameObject tutorialPanel;
+    public GameObject storyPanel;
+    public GameObject creditsPanel;
 
     public GameObject playButton;
     public GameObject quitButton;
-    public GameObject settingsButton;
+    public GameObject creditsButton;
+    public GameObject tutorialButton;
+    public GameObject storyButton;
     public GameObject gameNameText;
     public GameObject gameNameText2;
-     public void PlayGame()
+
+    public AudioClip hoverSound; // Ses dosyasını buraya at
+    private AudioSource audioSource;
+
+    void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // bir sonraki index'li sahne devreye girer.
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
+
+    // Bu fonksiyon UI butonlarına atanabilir
+    public void PlayHoverSound()
+    {
+        if (hoverSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hoverSound);
+        }
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
@@ -20,25 +43,47 @@ public class GameMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void SettingsGame()
+    public void CreditsGame()
     {
-        settingsPanel.SetActive(true);
-        playButton.SetActive(false);
-        quitButton.SetActive(false);
-        settingsButton.SetActive(false);
-        gameNameText.SetActive(false);
-        gameNameText2.SetActive(false);
-        
+        HideMainMenuUI();
+        creditsPanel.SetActive(true);
+    }
+
+    public void TutorialGame()
+    {
+        HideMainMenuUI();
+        tutorialPanel.SetActive(true);
+    }
+
+    public void StoryGame()
+    {
+        HideMainMenuUI();
+        storyPanel.SetActive(true);
     }
 
     public void BackToMainMenu()
     {
-        settingsPanel.SetActive(false);
+        tutorialButton.SetActive(true);
+        storyButton.SetActive(true);
         playButton.SetActive(true);
         quitButton.SetActive(true);
-        settingsButton.SetActive(true);
+        creditsButton.SetActive(true);
         gameNameText.SetActive(true);
         gameNameText2.SetActive(true);
 
+        tutorialPanel.SetActive(false);
+        storyPanel.SetActive(false);
+        creditsPanel.SetActive(false);
+    }
+
+    private void HideMainMenuUI()
+    {
+        playButton.SetActive(false);
+        quitButton.SetActive(false);
+        storyButton.SetActive(false);
+        gameNameText.SetActive(false);
+        gameNameText2.SetActive(false);
+        creditsButton.SetActive(false);
+        tutorialButton.SetActive(false);
     }
 }
