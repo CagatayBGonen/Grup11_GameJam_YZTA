@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2784080372532317243, guid: fcf430f4bef73ab4498c4b97af46235f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d570e1a0a91e39b419235751d2d25558, type: 2}
+    - target: {fileID: 2784080372532317243, guid: fcf430f4bef73ab4498c4b97af46235f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3240759109895672921, guid: d570e1a0a91e39b419235751d2d25558, type: 2}
     - target: {fileID: 6169428859920817081, guid: fcf430f4bef73ab4498c4b97af46235f, type: 3}
       propertyPath: m_IsActive
       value: 0
