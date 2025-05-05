@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3102254548431545845, guid: edf0bc33ca3e83445b84722754f43d2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8256970191790494163, guid: edf0bc33ca3e83445b84722754f43d2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.943062
@@ -557,6 +561,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1940777256}
+    - target: {fileID: 3311463614406165563, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: energyGoal
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4160746309168789138, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: m_Name
       value: GameManager

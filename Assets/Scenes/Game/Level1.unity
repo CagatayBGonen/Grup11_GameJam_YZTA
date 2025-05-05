@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3102254548431545845, guid: edf0bc33ca3e83445b84722754f43d2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8256970191790494163, guid: edf0bc33ca3e83445b84722754f43d2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.943062
@@ -572,12 +576,76 @@ PrefabInstance:
       objectReference: {fileID: 545470931}
     - target: {fileID: 3311463614406165563, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: energyGoal
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: initialTiles
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: groundPrefabs.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1244332761215920215, guid: a7887c02ff377ed49a5ccc8aa8f5d1ed, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3401171224152669964, guid: 5f181d22189c7994d92ad6c00d21cf15, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[2]'
+      value: 
+      objectReference: {fileID: 3276238894517757074, guid: aebad52fbd637df4a8852270d2bd03b9, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 6891868340374328250, guid: a3e96435e15616a41916052a8352be1c, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1073522942436372910, guid: 9b7cb995203f5ff45b13fc35a3e4e564, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[5]'
+      value: 
+      objectReference: {fileID: 7460419807173540897, guid: 34013938a6fb6854e8be82e6a224b471, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[6]'
+      value: 
+      objectReference: {fileID: 6686666926348302876, guid: 757987fe73d09a342b0d1dcdcf353ac0, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[7]'
+      value: 
+      objectReference: {fileID: 6270349219249957832, guid: 867ba600864b8d741a60616c1381ccb2, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[8]'
+      value: 
+      objectReference: {fileID: 274027783497520850, guid: d8e14e35beb8f7f41a6737310901b086, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[9]'
+      value: 
+      objectReference: {fileID: 8720896838650536957, guid: b9caf711d5c25434fb472c8c75aae0ca, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[10]'
+      value: 
+      objectReference: {fileID: 4269468515720098500, guid: 22ae936bb4d77834ebb48667e2fc11a8, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[11]'
+      value: 
+      objectReference: {fileID: 3868207166545597572, guid: 603f690b75a864a45ac7e067bc7eb272, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[12]'
+      value: 
+      objectReference: {fileID: 6074065781542188591, guid: 1be1f60dc64fe4348918c1e15989885d, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[13]'
+      value: 
+      objectReference: {fileID: 219212159878938235, guid: 085c667d815534346a38895208297c13, type: 3}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: 'groundPrefabs.Array.data[14]'
+      value: 
+      objectReference: {fileID: 2573489143076081788, guid: 6d9ec6288b1bc6245b39a5fe49eed72a, type: 3}
     - target: {fileID: 4160746309168789138, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: m_Name
       value: GameManager
