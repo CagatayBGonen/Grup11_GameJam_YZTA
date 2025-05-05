@@ -9,6 +9,7 @@ public class GameMenu : MonoBehaviour
     public GameObject quitButton;
     public GameObject settingsButton;
     public GameObject gameNameText;
+    public GameObject gameNameText2;
      public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // bir sonraki index'li sahne devreye girer.
@@ -26,6 +27,7 @@ public class GameMenu : MonoBehaviour
         quitButton.SetActive(false);
         settingsButton.SetActive(false);
         gameNameText.SetActive(false);
+        gameNameText2.SetActive(false);
         
     }
 
@@ -36,5 +38,7 @@ public class GameMenu : MonoBehaviour
         quitButton.SetActive(true);
         settingsButton.SetActive(true);
         gameNameText.SetActive(true);
+        gameNameText2.SetActive(true);
+
     }
 }
