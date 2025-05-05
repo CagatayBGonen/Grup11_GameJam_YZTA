@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int energyCount = 0; // enerji say�s�n� tutacak
     public int energyGoal = 10; // toplam enerji limiti
     public AudioClip deadSound;
+
     public AudioSource GameMusic;
 
     private void Awake()
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void LevelCompleted() // level tamamland�g�nda cal�st�r�lan metho
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // bir sonraki index s�ras�ndaki scene ac�l�r.
+        
     }
 
     public void GameOver()
