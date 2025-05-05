@@ -27,6 +27,7 @@ public class PlayerControllerSc : MonoBehaviour
     private GameObject dashBarInstance;
 
      public AudioClip collectSound;
+     public AudioClip dashSound;
     private Image dashBarFill;
 
     void Start()
@@ -156,6 +157,7 @@ public class PlayerControllerSc : MonoBehaviour
         dashCooldownTimer = dashCooldown;
 
         rb.linearVelocity = new Vector2(dashForce, 0f);
+        AudioSource.PlayClipAtPoint(dashSound, transform.position);
 
         if (animator != null)
             animator.SetBool("isDashing", true);

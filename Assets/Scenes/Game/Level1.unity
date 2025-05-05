@@ -463,7 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 545470931}
     - target: {fileID: 3311463614406165563, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: energyGoal
-      value: 5
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
+      propertyPath: initialTiles
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4160746309168789138, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: m_Name
@@ -522,6 +526,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1044527110565739114, guid: 5328155b10cda6b4dbe02da0ac60f737, type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: feb580b6205c93a41896cbdcce3fab59, type: 3}
+    - target: {fileID: 1044527110565739114, guid: 5328155b10cda6b4dbe02da0ac60f737, type: 3}
+      propertyPath: jumpForce
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1044527110565739114, guid: 5328155b10cda6b4dbe02da0ac60f737, type: 3}
       propertyPath: dashBarPrefab
       value: 
@@ -661,6 +673,10 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: d570e1a0a91e39b419235751d2d25558, type: 2}
+    - target: {fileID: 3046908164631656867, guid: a1dacee637ed28d41a86ac9128b45050, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3046908164631656867, guid: a1dacee637ed28d41a86ac9128b45050, type: 3}
       propertyPath: m_sharedMaterial
       value: 
