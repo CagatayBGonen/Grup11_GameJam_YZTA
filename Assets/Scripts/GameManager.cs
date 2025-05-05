@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
     public void CollectEnergy() // enerji say�s�n� art�r�r
     {
         energyCount++;
-        Debug.Log("Enerji Topland�: " + energyCount);
 
         if(energyCount >= energyGoal) // ama�lanan enerji seviyesine gelinip gelinmedigi kontrol ediliyior.
         {
@@ -39,7 +38,6 @@ public class GameManager : MonoBehaviour
     public void LooseEnergy()
     {
         energyCount--;
-        Debug.Log("Enerji kaybedildi: " + energyCount);
         if(energyCount <= -1)
         {
             GameOver();
