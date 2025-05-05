@@ -458,6 +458,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4671560842329383944, guid: 9ae67e80dabe24541ad4d27c21aadbb1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ff783c1b5406c94c8400c24b909ee35, type: 2}
+    - target: {fileID: 4671560842329383944, guid: 9ae67e80dabe24541ad4d27c21aadbb1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4094597951265774707, guid: 6ff783c1b5406c94c8400c24b909ee35, type: 2}
+    - target: {fileID: 4671560842329383944, guid: 9ae67e80dabe24541ad4d27c21aadbb1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5936389688794286157, guid: 9ae67e80dabe24541ad4d27c21aadbb1, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -560,7 +572,7 @@ PrefabInstance:
       objectReference: {fileID: 545470931}
     - target: {fileID: 3311463614406165563, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: energyGoal
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3354154685109636047, guid: 332ffec925338cd44a69e9cae9bc424d, type: 3}
       propertyPath: initialTiles

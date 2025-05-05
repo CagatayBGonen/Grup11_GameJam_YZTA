@@ -9,6 +9,6 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        energyCountText.text = $"Energy Collected: {gameManager.energyCount}/10";
+        energyCountText.text = $"Energy Collected: {gameManager.energyCount}/{gameManager.energyGoal}";
     }
 }
